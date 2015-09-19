@@ -35,3 +35,10 @@ Session.vim
 .netrwhist
 *~
 
+## Add Manualy
+
+.envrc
+/_vendor/
+/bin/
+/build/
+/src/

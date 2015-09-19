@@ -1,0 +1,12 @@
+language: go
+go:
+  - tip
+before_install:
+  - go get github.com/mattn/gom
+  - go get github.com/mitchellh/gox
+  - go get github.com/tcnksm/ghr
+script:
+  - $HOME/gopath/bin/gom install
+  - $HOME/gopath/bin/gom test
+after_success:
+  - gox -output "dist/{.OS}_{.Arch}_{.Dir}"
