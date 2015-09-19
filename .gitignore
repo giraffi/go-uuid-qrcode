@@ -41,4 +41,5 @@ Session.vim
 /_vendor/
 /bin/
 /build/
+/dist/
 /src/

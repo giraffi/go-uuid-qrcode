@@ -9,4 +9,4 @@ script:
   - $HOME/gopath/bin/gom install
   - $HOME/gopath/bin/gom test
 after_success:
-  - gox -output "dist/{.OS}_{.Arch}_{.Dir}"
+  - gom exec gox -output "dist/{.OS}_{.Arch}_{.Dir}"
