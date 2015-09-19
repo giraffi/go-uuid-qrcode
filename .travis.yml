@@ -10,4 +10,5 @@ script:
   - $HOME/gopath/bin/gom test
 after_success:
   - gom exec gox -output "dist/{{.OS}}_{{.Arch}}_{{.Dir}}"
+  - chmod +x dist/*
   - ghr --username giraffi --token $GITHUB_TOKEN --replace $TRAVIS_BRANCH --prerelease dist/
