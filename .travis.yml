@@ -9,7 +9,6 @@ script:
   - $HOME/gopath/bin/gom install
   - $HOME/gopath/bin/gom test
 after_success:
-  - gom exec gox -output "dist/{{.OS}}_{{.Arch}}_{{.Dir}}"
-  - find dist/* -exec zip {}.zip {} \;
-  - find dist/* ! -name "*.zip" -delete
+  - gom exec gox -output "dist/{{.OS}}_{{.Arch}}/qruuid"
+  - find dist/* -type d -exec zip -r {}.zip {} \;
   - ghr --username giraffi --token $GITHUB_TOKEN --replace --prerelease $TRAVIS_BRANCH dist/
