@@ -12,3 +12,10 @@ $ ls
 e1018559-cc0a-4a29-a6ac-2369f626e92c.png
 ```
 
+### Windows
+
+click `qruuid.exe`.
+
+## LICENSE
+
+MIT
