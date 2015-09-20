@@ -12,4 +12,4 @@ after_success:
   - gom exec gox -output "dist/{{.OS}}_{{.Arch}}_{{.Dir}}"
   - find dist/* -exec zip {}.zip {} \;
   - find dist/* ! -name "*.zip" -delete
-  - ghr --username giraffi --token $GITHUB_TOKEN --replace $TRAVIS_BRANCH --prerelease dist/
+  - ghr --username giraffi --token $GITHUB_TOKEN --replace --prerelease $TRAVIS_BRANCH dist/
