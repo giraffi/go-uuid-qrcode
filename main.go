@@ -19,8 +19,7 @@ func main() {
 	}
 
 	text := uuid.New()
-	data, _ := qrcode.New(text, qrcode.High)
-	content := data.PNG()
+	content, _ := qrcode.Encode(text, qrcode.High, 256)
 	fmt.Println(text)
 	ioutil.WriteFile(text+".png", content, 0644)
 }
