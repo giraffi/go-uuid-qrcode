@@ -19,7 +19,6 @@ func main() {
 	}
 
 	text := uuid.New()
-	var data *qrcode.QRCode
 	data, _ := qrcode.New(text, qrcode.High)
 	content := data.PNG()
 	fmt.Println(text)
