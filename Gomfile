@@ -1,2 +1,2 @@
 gom	"github.com/pborman/uuid"
-gom	"code.google.com/p/rsc/qr"
+gom	"github.com/skip2/go-qrcode"
