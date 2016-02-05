@@ -1,2 +1,2 @@
-gom	"code.google.com/p/go-uuid/uuid"
+gom	"github.com/pborman/uuid"
 gom	"code.google.com/p/rsc/qr"

@@ -1,7 +1,7 @@
 package main
 
 import (
-	"code.google.com/p/go-uuid/uuid"
+	"github.com/pborman/uuid"
 	"code.google.com/p/rsc/qr"
 	"flag"
 	"fmt"
