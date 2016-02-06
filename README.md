@@ -2,6 +2,17 @@
 
 generate uuid and save as PNG of QRCode(H).
 
+
+## Build
+
+```
+$ go get github.com/mattn/gom
+$ go get github.com/mitchellh/gox
+
+$ gom install
+$ gom exec gox -output "dist/qruuid_{{.OS}}_{{.Arch}}/qruuid"
+```
+
 ## command qruuid
 
 ```
