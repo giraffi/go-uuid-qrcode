@@ -1,2 +1,2 @@
-gom	"code.google.com/p/go-uuid/uuid"
-gom	"code.google.com/p/rsc/qr"
+gom	"github.com/pborman/uuid"
+gom	"github.com/skip2/go-qrcode"

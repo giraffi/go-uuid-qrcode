@@ -1,8 +1,8 @@
 package main
 
 import (
-	"code.google.com/p/go-uuid/uuid"
-	"code.google.com/p/rsc/qr"
+	"github.com/pborman/uuid"
+	qrcode "github.com/skip2/go-qrcode"
 	"flag"
 	"fmt"
 	"io/ioutil"
@@ -19,8 +19,7 @@ func main() {
 	}
 
 	text := uuid.New()
-	data, _ := qr.Encode(text, qr.H)
-	content := data.PNG()
+	content, _ := qrcode.Encode(text, qrcode.High, 256)
 	fmt.Println(text)
 	ioutil.WriteFile(text+".png", content, 0644)
 }
