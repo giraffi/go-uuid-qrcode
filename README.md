@@ -27,6 +27,19 @@ e1018559-cc0a-4a29-a6ac-2369f626e92c.png
 
 click `qruuid.exe`.
 
+
+## Release(note for me.)
+
+master branch is released automaticaly to `giraffi/go-uuid-qrcode/releases/tag/master` by travis.
+
+### stable release
+
+```
+go get github.com/tcnksm/ghr
+find dist/* -type d -exec zip -r {}.zip {} \;
+gom exec ghr --username giraffi --token $GITHUB_TOKEN v0.2.0 dist/
+```
+
 ## LICENSE
 
 MIT
