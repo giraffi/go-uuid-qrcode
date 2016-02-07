@@ -11,4 +11,4 @@ script:
 after_success:
   - gom exec gox -output "dist/qruuid_{{.OS}}_{{.Arch}}/qruuid"
   - find dist/* -type d -exec zip -r {}.zip {} \;
-  - ghr --username giraffi --token $GITHUB_TOKEN --replace --prerelease $TRAVIS_BRANCH dist/
+  - ghr --username giraffi --token $GITHUB_TOKEN --replace --prerelease travis_$TRAVIS_BRANCH dist/
